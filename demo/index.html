@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../dist/src/sand-example.js';
+
+    const header = 'Hello owc World!';
+    render(
+      html`
+        <sand-example .header=${header}>
+          some light-dom
+        </sand-example>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
